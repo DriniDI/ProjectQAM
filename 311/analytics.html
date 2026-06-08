@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>311 Analytics</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="page-index">
+  <header class="page-header">
+    <div>
+      <p class="eyebrow">ProjectQAM / 311 Dataset</p>
+      <h1>Facility Analytics</h1>
+      <p class="subtitle">View borough distribution with a chart and pie chart.</p>
+    </div>
+    <nav class="page-nav">
+      <a href="index.html">Home</a>
+      <a href="analytics.html" class="active">Analytics</a>
+    </nav>
+  </header>
+
+  <main class="page-main">
+    <section class="results-section">
+      <div class="results-header">
+        <h2>Facility Breakdown</h2>
+        <div id="facility-count" class="result-count">Loading…</div>
+      </div>
+
+      <div class="chart-grid single-chart">
+        <article class="facility-card chart-card">
+          <h3>Borough totals</h3>
+          <canvas id="boroughChart" width="400" height="220"></canvas>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="helper.js"></script>
+  <script src="analytics.js"></script>
+</body>
+</html>

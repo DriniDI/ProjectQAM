@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NYC Fire Facilities</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="page-index">
+  <header class="page-header">
+    <div>
+      <p class="eyebrow">ProjectQAM / 311 Dataset</p>
+      <h1>NYC Fire Facilities</h1>
+      <p class="subtitle">Browse fire facility locations from the NYC 311 dataset.</p>
+    </div>
+    <nav class="page-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="analytics.html">Analytics</a>
+    </nav>
+  </header>
+
+  <main class="page-main">
+    <section class="filter-panel">
+      <div class="filter-grid">
+        <label>
+          Borough
+          <select id="boroughSelect">
+            <option value="ALL">All boroughs</option>
+            <option value="Manhattan">Manhattan</option>
+            <option value="Bronx">Bronx</option>
+            <option value="Brooklyn">Brooklyn</option>
+            <option value="Queens">Queens</option>
+            <option value="Staten Island">Staten Island</option>
+          </select>
+        </label>
+        <label>
+          ZIP code
+          <input id="zipInput" type="text" placeholder="e.g. 10001" />
+        </label>
+      </div>
+    </section>
+
+    <section class="results-section">
+      <div class="results-header">
+        <h2>Locations</h2>
+        <div id="facility-count" class="result-count"></div>
+      </div>
+      <div id="facility-list" class="card-grid"></div>
+    </section>
+  </main>
+
+  <script src="helper.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
